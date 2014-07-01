@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YSQImagePicker.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    YSQImagePickerViewController *picker = [[YSQImagePickerViewController alloc]init];
+    picker.maxSelectImageCount = 10;
+    [self presentImagePickerController:picker animated:YES completion:nil finish:^(NSArray *array) {
+        
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning

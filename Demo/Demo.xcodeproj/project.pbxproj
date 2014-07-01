@@ -21,6 +21,18 @@
 		1A77C34F1962B8BB00D9713B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A77C3311962B8BB00D9713B /* UIKit.framework */; };
 		1A77C3571962B8BB00D9713B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A77C3551962B8BB00D9713B /* InfoPlist.strings */; };
 		1A77C3591962B8BB00D9713B /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C3581962B8BB00D9713B /* DemoTests.m */; };
+		1A77C36C1962BA4600D9713B /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A77C3641962BA4600D9713B /* close.png */; };
+		1A77C36D1962BA4600D9713B /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A77C3651962BA4600D9713B /* close@2x.png */; };
+		1A77C36E1962BA4600D9713B /* noSelectImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A77C3661962BA4600D9713B /* noSelectImage.png */; };
+		1A77C36F1962BA4600D9713B /* noSelectImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A77C3671962BA4600D9713B /* noSelectImage@2x.png */; };
+		1A77C3701962BA4600D9713B /* selectImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A77C3681962BA4600D9713B /* selectImage.png */; };
+		1A77C3711962BA4600D9713B /* selectImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A77C3691962BA4600D9713B /* selectImage@2x.png */; };
+		1A77C3721962BA4600D9713B /* UIViewController+MultipleImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C36B1962BA4600D9713B /* UIViewController+MultipleImagePicker.m */; };
+		1A77C3751962BA6400D9713B /* YSQImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C3741962BA6400D9713B /* YSQImagePickerViewController.m */; };
+		1A77C3791962BAC500D9713B /* AssetImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C3781962BAC500D9713B /* AssetImageObject.m */; };
+		1A77C37D1962BB1500D9713B /* PickerSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C37B1962BB1500D9713B /* PickerSubViewController.m */; };
+		1A77C37E1962BB1500D9713B /* PickerSubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A77C37C1962BB1500D9713B /* PickerSubViewController.xib */; };
+		1A77C3811962BC9500D9713B /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C3801962BC9500D9713B /* UIView+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +65,24 @@
 		1A77C3541962B8BB00D9713B /* DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoTests-Info.plist"; sourceTree = "<group>"; };
 		1A77C3561962B8BB00D9713B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A77C3581962B8BB00D9713B /* DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTests.m; sourceTree = "<group>"; };
+		1A77C3641962BA4600D9713B /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		1A77C3651962BA4600D9713B /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		1A77C3661962BA4600D9713B /* noSelectImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noSelectImage.png; sourceTree = "<group>"; };
+		1A77C3671962BA4600D9713B /* noSelectImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noSelectImage@2x.png"; sourceTree = "<group>"; };
+		1A77C3681962BA4600D9713B /* selectImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectImage.png; sourceTree = "<group>"; };
+		1A77C3691962BA4600D9713B /* selectImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectImage@2x.png"; sourceTree = "<group>"; };
+		1A77C36A1962BA4600D9713B /* UIViewController+MultipleImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MultipleImagePicker.h"; sourceTree = "<group>"; };
+		1A77C36B1962BA4600D9713B /* UIViewController+MultipleImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MultipleImagePicker.m"; sourceTree = "<group>"; };
+		1A77C3731962BA6400D9713B /* YSQImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSQImagePickerViewController.h; sourceTree = "<group>"; };
+		1A77C3741962BA6400D9713B /* YSQImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSQImagePickerViewController.m; sourceTree = "<group>"; };
+		1A77C3771962BAC500D9713B /* AssetImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetImageObject.h; sourceTree = "<group>"; };
+		1A77C3781962BAC500D9713B /* AssetImageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetImageObject.m; sourceTree = "<group>"; };
+		1A77C37A1962BB1500D9713B /* PickerSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerSubViewController.h; sourceTree = "<group>"; };
+		1A77C37B1962BB1500D9713B /* PickerSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerSubViewController.m; sourceTree = "<group>"; };
+		1A77C37C1962BB1500D9713B /* PickerSubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerSubViewController.xib; sourceTree = "<group>"; };
+		1A77C37F1962BC9500D9713B /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		1A77C3801962BC9500D9713B /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		1A77C3821962BCBC00D9713B /* YSQImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSQImagePicker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +142,7 @@
 		1A77C3331962B8BB00D9713B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				1A77C3621962BA4600D9713B /* Class */,
 				1A77C33C1962B8BB00D9713B /* AppDelegate.h */,
 				1A77C33D1962B8BB00D9713B /* AppDelegate.m */,
 				1A77C33F1962B8BB00D9713B /* Main.storyboard */,
@@ -150,6 +181,47 @@
 				1A77C3551962B8BB00D9713B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A77C3621962BA4600D9713B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				1A77C3821962BCBC00D9713B /* YSQImagePicker.h */,
+				1A77C37F1962BC9500D9713B /* UIView+Utils.h */,
+				1A77C3801962BC9500D9713B /* UIView+Utils.m */,
+				1A77C3761962BAC500D9713B /* model */,
+				1A77C3631962BA4600D9713B /* image */,
+				1A77C36A1962BA4600D9713B /* UIViewController+MultipleImagePicker.h */,
+				1A77C36B1962BA4600D9713B /* UIViewController+MultipleImagePicker.m */,
+				1A77C3731962BA6400D9713B /* YSQImagePickerViewController.h */,
+				1A77C3741962BA6400D9713B /* YSQImagePickerViewController.m */,
+				1A77C37A1962BB1500D9713B /* PickerSubViewController.h */,
+				1A77C37B1962BB1500D9713B /* PickerSubViewController.m */,
+				1A77C37C1962BB1500D9713B /* PickerSubViewController.xib */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		1A77C3631962BA4600D9713B /* image */ = {
+			isa = PBXGroup;
+			children = (
+				1A77C3641962BA4600D9713B /* close.png */,
+				1A77C3651962BA4600D9713B /* close@2x.png */,
+				1A77C3661962BA4600D9713B /* noSelectImage.png */,
+				1A77C3671962BA4600D9713B /* noSelectImage@2x.png */,
+				1A77C3681962BA4600D9713B /* selectImage.png */,
+				1A77C3691962BA4600D9713B /* selectImage@2x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		1A77C3761962BAC500D9713B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1A77C3771962BAC500D9713B /* AssetImageObject.h */,
+				1A77C3781962BAC500D9713B /* AssetImageObject.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +300,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A77C36D1962BA4600D9713B /* close@2x.png in Resources */,
 				1A77C3461962B8BB00D9713B /* Images.xcassets in Resources */,
+				1A77C37E1962BB1500D9713B /* PickerSubViewController.xib in Resources */,
+				1A77C3711962BA4600D9713B /* selectImage@2x.png in Resources */,
+				1A77C36E1962BA4600D9713B /* noSelectImage.png in Resources */,
 				1A77C3381962B8BB00D9713B /* InfoPlist.strings in Resources */,
+				1A77C36F1962BA4600D9713B /* noSelectImage@2x.png in Resources */,
+				1A77C3701962BA4600D9713B /* selectImage.png in Resources */,
+				1A77C36C1962BA4600D9713B /* close.png in Resources */,
 				1A77C3411962B8BB00D9713B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,8 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A77C3751962BA6400D9713B /* YSQImagePickerViewController.m in Sources */,
 				1A77C3441962B8BB00D9713B /* ViewController.m in Sources */,
 				1A77C33E1962B8BB00D9713B /* AppDelegate.m in Sources */,
+				1A77C3791962BAC500D9713B /* AssetImageObject.m in Sources */,
+				1A77C37D1962BB1500D9713B /* PickerSubViewController.m in Sources */,
+				1A77C3721962BA4600D9713B /* UIViewController+MultipleImagePicker.m in Sources */,
+				1A77C3811962BC9500D9713B /* UIView+Utils.m in Sources */,
 				1A77C33A1962B8BB00D9713B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +540,7 @@
 				1A77C35E1962B8BB00D9713B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A77C35F1962B8BB00D9713B /* Build configuration list for PBXNativeTarget "DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +549,7 @@
 				1A77C3611962B8BB00D9713B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
