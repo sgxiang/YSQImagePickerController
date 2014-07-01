@@ -9,7 +9,6 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "AssetImageObject.h"
 #import "PickerSubViewController.h"
-#import "UIView+Utils.h"
 
 @interface YSQImagePickerViewController ()
 

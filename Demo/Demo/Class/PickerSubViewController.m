@@ -8,7 +8,6 @@
 
 #import "PickerSubViewController.h"
 #import "AssetImageObject.h"
-#import "UIView+Utils.h"
 
 @interface PickerSubViewController ()
 
@@ -133,19 +132,21 @@
 
 
 -(void)resetNumberView{
+    CGRect frame = self.selectImageNumber.frame;
     int temp = [self.selectedArray count];
     if (temp>=10) {
-        self.selectImageNumber.width = 34;
+        frame.size.width = 34;
     }else{
-        self.selectImageNumber.width = 25;
+        frame.size.width = 25;
     }
+    self.selectImageNumber.frame = frame;
     if (temp>99) {
         temp = 99;
     }
 
     [self.selectImageNumber setTitle:[NSString stringWithFormat:@"%d",temp] forState:UIControlStateNormal];
     
-    self.selectImageNumber.layer.cornerRadius = self.selectImageNumber.height/2.0;
+    self.selectImageNumber.layer.cornerRadius = frame.size.height/2.0;
     self.selectImageNumber.backgroundColor = [UIColor redColor];
 }
 
