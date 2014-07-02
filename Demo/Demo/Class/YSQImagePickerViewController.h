@@ -11,7 +11,7 @@
 
 static const int DEFAULTMAXSELECTIMAGECOUNT = 9;  //默认最多选择的个数
 
-typedef void(^FinishSelectImageBlock)(NSArray *array);  //带有选择之后的图片地址
+typedef void(^FinishSelectImageBlock)(NSMutableArray *array);  //带有选择之后的图片
 
 @interface YSQImagePickerViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 

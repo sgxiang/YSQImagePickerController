@@ -9,8 +9,8 @@
 #ifndef Demo_YSQImagePicker_h
 #define Demo_YSQImagePicker_h
 
+#import "AssetHelper.h"
 #import "UIViewController+MultipleImagePicker.h"
 #import "YSQImagePickerViewController.h"
-#import "AssetImageObject.h"
 
 #endif

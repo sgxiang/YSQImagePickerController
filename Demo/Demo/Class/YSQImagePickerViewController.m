@@ -7,16 +7,15 @@
 //
 #import "YSQImagePickerViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
-#import "AssetImageObject.h"
 #import "PickerSubViewController.h"
+#import "AssetHelper.h"
 
 @interface YSQImagePickerViewController ()
 
 @end
 
 @implementation YSQImagePickerViewController{
-    NSMutableArray *_groupNameArray;    //保存图片组名
-    NSMutableArray *_imageAssetArray;     //保存图片对象
+    NSMutableArray *_groupArray;    //保存图片组
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,21 +34,19 @@
     
     self.navigationItem.title = @"Photos";
     
-    _groupNameArray = [[NSMutableArray alloc]init];
-    _imageAssetArray = [[NSMutableArray alloc]init];
+    _groupArray = [[NSMutableArray alloc]init];
     if (!self.selectedImageArray) {
         self.selectedImageArray = [[NSMutableArray alloc]init];
     }
     
     [self configureNavigation];
     
-    [self loadImage];
+    [self loadGroup];
     
     self.tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.backgroundColor = [UIColor clearColor];
     
     
     [self.view addSubview:self.tableView];
@@ -60,6 +57,9 @@
     
 }
 
+-(void)setSelectedImageArray:(NSMutableArray *)selectedImageArray{
+    _selectedImageArray = [selectedImageArray mutableCopy];
+}
 /**
  *  配置头部导航
  */
@@ -73,53 +73,16 @@
 -(void)close{
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
+
 /**
- *  加载读取图片
+ *  加载读取分组
  */
--(void)loadImage{
+-(void)loadGroup{
     
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc]init];
-        __block int groupIndex = -1;
-        dispatch_group_t readAsset = dispatch_group_create();
-        dispatch_group_enter(readAsset);
-        
-        [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
-            if (!group) {
-                dispatch_group_leave(readAsset);
-                return;
-            }
-            groupIndex++;
-            NSString *g=[NSString stringWithFormat:@"%@",group];//获取相簿的组
-            NSString *groupName = [[[g substringFromIndex:16]componentsSeparatedByString:@","][0]substringFromIndex:5]; //组名
-            //保存组名
-            [_groupNameArray addObject:groupName];
-            [_imageAssetArray addObject:[@[]mutableCopy]];
-            [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {//从group里面
-                if ([[result valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypePhoto]) {
-                    __block AssetImageObject *a = [[AssetImageObject alloc]initWithAsset:result];
-                    //保存图片对象
-                    [_imageAssetArray[groupIndex]addObject:a];
-                    if (index==0) {
-                        a.smallImageData = UIImageJPEGRepresentation([UIImage imageWithCGImage:result.thumbnail], 0.5);
-                    }else{
-                        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                            a.smallImageData = UIImageJPEGRepresentation([UIImage imageWithCGImage:result.thumbnail], 0.5);
-                        });
-                    }
-                }
-            }];
-        } failureBlock:^(NSError *error) {
-            NSLog(@"Enumerate the asset groups failed.");
-            dispatch_group_leave(readAsset);
-            
-        }];
-        
-        dispatch_group_notify(readAsset, dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
-        
-    });
+    [ASSETHELPER getGroup:^(NSArray *arr) {
+        _groupArray = [arr mutableCopy];
+        [self.tableView reloadData];
+    }];
     
 }
 
@@ -130,7 +93,7 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [_groupNameArray count];
+    return [_groupArray count];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
@@ -141,12 +104,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
-        cell.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    cell.imageView.image = [UIImage imageWithData:((AssetImageObject *)(_imageAssetArray[indexPath.row][0])).smallImageData];
-    cell.textLabel.text = _groupNameArray[indexPath.row];
-    cell.textLabel.textColor = [UIColor whiteColor];
+
+    NSDictionary *info = [ASSETHELPER getGroupInfo:_groupArray[indexPath.row]];
+    cell.imageView.image = [info objectForKey:@"thumbnail"];
+    cell.textLabel.text = [info objectForKey:@"name"];
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
@@ -157,11 +120,10 @@
 //推送到选择子视图
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     PickerSubViewController *sub = [[PickerSubViewController alloc]initWithNibName:@"PickerSubViewController" bundle:nil];
-    sub.imageAssetArray = _imageAssetArray[indexPath.row];
+    sub.group = _groupArray[indexPath.row];
     sub.selectedArray = self.selectedImageArray;
-    sub.title = _groupNameArray[indexPath.row];
     sub.subFinishSelectBlock = ^(NSMutableArray *array){
-        self.selectedImageArray = [array mutableCopy];
+        self.selectedImageArray = array;
     };
     sub.finishBlock = self.finishBlock;
     sub.maxSelectImageCount = self.maxSelectImageCount;
@@ -177,6 +139,5 @@
 -(void)setMaxSelectImageCount:(int)maxSelectImageCount{
     _maxSelectImageCount = maxSelectImageCount;
 }
-
 
 @end

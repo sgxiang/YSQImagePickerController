@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1C65001963A5C50007830D /* AssetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C64FF1963A5C50007830D /* AssetHelper.m */; };
+		1A1C65031963B4720007830D /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C65011963B4720007830D /* back.png */; };
+		1A1C65041963B4720007830D /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C65021963B4720007830D /* back@2x.png */; };
+		1A1C650A1963BC040007830D /* ALAsset+Equal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C65091963BC040007830D /* ALAsset+Equal.m */; };
 		1A77C32E1962B8BB00D9713B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A77C32D1962B8BB00D9713B /* Foundation.framework */; };
 		1A77C3301962B8BB00D9713B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A77C32F1962B8BB00D9713B /* CoreGraphics.framework */; };
 		1A77C3321962B8BB00D9713B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A77C3311962B8BB00D9713B /* UIKit.framework */; };
@@ -29,7 +33,6 @@
 		1A77C3711962BA4600D9713B /* selectImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A77C3691962BA4600D9713B /* selectImage@2x.png */; };
 		1A77C3721962BA4600D9713B /* UIViewController+MultipleImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C36B1962BA4600D9713B /* UIViewController+MultipleImagePicker.m */; };
 		1A77C3751962BA6400D9713B /* YSQImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C3741962BA6400D9713B /* YSQImagePickerViewController.m */; };
-		1A77C3791962BAC500D9713B /* AssetImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C3781962BAC500D9713B /* AssetImageObject.m */; };
 		1A77C37D1962BB1500D9713B /* PickerSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A77C37B1962BB1500D9713B /* PickerSubViewController.m */; };
 		1A77C37E1962BB1500D9713B /* PickerSubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A77C37C1962BB1500D9713B /* PickerSubViewController.xib */; };
 /* End PBXBuildFile section */
@@ -45,6 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A1C64FE1963A5C50007830D /* AssetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetHelper.h; sourceTree = "<group>"; };
+		1A1C64FF1963A5C50007830D /* AssetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetHelper.m; sourceTree = "<group>"; };
+		1A1C65011963B4720007830D /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		1A1C65021963B4720007830D /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		1A1C65081963BC040007830D /* ALAsset+Equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+Equal.h"; sourceTree = "<group>"; };
+		1A1C65091963BC040007830D /* ALAsset+Equal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+Equal.m"; sourceTree = "<group>"; };
 		1A77C32A1962B8BB00D9713B /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A77C32D1962B8BB00D9713B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1A77C32F1962B8BB00D9713B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,8 +83,6 @@
 		1A77C36B1962BA4600D9713B /* UIViewController+MultipleImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MultipleImagePicker.m"; sourceTree = "<group>"; };
 		1A77C3731962BA6400D9713B /* YSQImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSQImagePickerViewController.h; sourceTree = "<group>"; };
 		1A77C3741962BA6400D9713B /* YSQImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSQImagePickerViewController.m; sourceTree = "<group>"; };
-		1A77C3771962BAC500D9713B /* AssetImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetImageObject.h; sourceTree = "<group>"; };
-		1A77C3781962BAC500D9713B /* AssetImageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetImageObject.m; sourceTree = "<group>"; };
 		1A77C37A1962BB1500D9713B /* PickerSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerSubViewController.h; sourceTree = "<group>"; };
 		1A77C37B1962BB1500D9713B /* PickerSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerSubViewController.m; sourceTree = "<group>"; };
 		1A77C37C1962BB1500D9713B /* PickerSubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerSubViewController.xib; sourceTree = "<group>"; };
@@ -184,8 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				1A77C3821962BCBC00D9713B /* YSQImagePicker.h */,
-				1A77C3761962BAC500D9713B /* model */,
 				1A77C3631962BA4600D9713B /* image */,
+				1A1C65081963BC040007830D /* ALAsset+Equal.h */,
+				1A1C65091963BC040007830D /* ALAsset+Equal.m */,
 				1A77C36A1962BA4600D9713B /* UIViewController+MultipleImagePicker.h */,
 				1A77C36B1962BA4600D9713B /* UIViewController+MultipleImagePicker.m */,
 				1A77C3731962BA6400D9713B /* YSQImagePickerViewController.h */,
@@ -193,6 +201,8 @@
 				1A77C37A1962BB1500D9713B /* PickerSubViewController.h */,
 				1A77C37B1962BB1500D9713B /* PickerSubViewController.m */,
 				1A77C37C1962BB1500D9713B /* PickerSubViewController.xib */,
+				1A1C64FE1963A5C50007830D /* AssetHelper.h */,
+				1A1C64FF1963A5C50007830D /* AssetHelper.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -200,6 +210,8 @@
 		1A77C3631962BA4600D9713B /* image */ = {
 			isa = PBXGroup;
 			children = (
+				1A1C65011963B4720007830D /* back.png */,
+				1A1C65021963B4720007830D /* back@2x.png */,
 				1A77C3641962BA4600D9713B /* close.png */,
 				1A77C3651962BA4600D9713B /* close@2x.png */,
 				1A77C3661962BA4600D9713B /* noSelectImage.png */,
@@ -208,15 +220,6 @@
 				1A77C3691962BA4600D9713B /* selectImage@2x.png */,
 			);
 			path = image;
-			sourceTree = "<group>";
-		};
-		1A77C3761962BAC500D9713B /* model */ = {
-			isa = PBXGroup;
-			children = (
-				1A77C3771962BAC500D9713B /* AssetImageObject.h */,
-				1A77C3781962BAC500D9713B /* AssetImageObject.m */,
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,8 +303,10 @@
 				1A77C37E1962BB1500D9713B /* PickerSubViewController.xib in Resources */,
 				1A77C3711962BA4600D9713B /* selectImage@2x.png in Resources */,
 				1A77C36E1962BA4600D9713B /* noSelectImage.png in Resources */,
+				1A1C65041963B4720007830D /* back@2x.png in Resources */,
 				1A77C3381962B8BB00D9713B /* InfoPlist.strings in Resources */,
 				1A77C36F1962BA4600D9713B /* noSelectImage@2x.png in Resources */,
+				1A1C65031963B4720007830D /* back.png in Resources */,
 				1A77C3701962BA4600D9713B /* selectImage.png in Resources */,
 				1A77C36C1962BA4600D9713B /* close.png in Resources */,
 				1A77C3411962B8BB00D9713B /* Main.storyboard in Resources */,
@@ -323,10 +328,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1C65001963A5C50007830D /* AssetHelper.m in Sources */,
 				1A77C3751962BA6400D9713B /* YSQImagePickerViewController.m in Sources */,
 				1A77C3441962B8BB00D9713B /* ViewController.m in Sources */,
+				1A1C650A1963BC040007830D /* ALAsset+Equal.m in Sources */,
 				1A77C33E1962B8BB00D9713B /* AppDelegate.m in Sources */,
-				1A77C3791962BAC500D9713B /* AssetImageObject.m in Sources */,
 				1A77C37D1962BB1500D9713B /* PickerSubViewController.m in Sources */,
 				1A77C3721962BA4600D9713B /* UIViewController+MultipleImagePicker.m in Sources */,
 				1A77C33A1962B8BB00D9713B /* main.m in Sources */,
