@@ -1,14 +1,9 @@
-YSQImagePickerController
-========================
-
-*multiple picker image*
-
 # YSQImagePickerController
 ========================
 
-`#import "YSQImagePicker.h"`
-
 ## Usage
+
+`#import "YSQImagePicker.h"`
 
 ```obj-c
 YSQImagePickerViewController *picker = [[YSQImagePickerViewController alloc]init];
